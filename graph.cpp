@@ -36,24 +36,17 @@ QString Graph::printConnectedOrt(Ort* o)const{
     QString info;
     for(int i{};i<allRoute.size();i++){
         if(o== allRoute[i]->getFrom()) {
-            info +=allRoute[i]->getTo()->getName();
+            info +=QString::fromStdString(allRoute[i]->getTo()->getName());
             info += "\t entfernung = ";
             info +=QString::number( o->getDistance(*allRoute[i]->getTo()));
             info += "km\n";
         }
         if(o==allRoute[i]->getTo()){
-            info += allRoute[i]->getFrom()->getName();
+            info += QString::fromStdString(allRoute[i]->getFrom()->getName());
             info += "\t entfernung = ";
             info += QString::number(o->getDistance(*allRoute[i]->getFrom()));
             info += "km\n";
         }
-        //        if(isConnected(o,allRoute[i]->getFrom())) {
-        //            info +=allRoute[i]->getFrom()->getName();
-        //            info += "\t entfernung = ";
-        //            info +=QString::number( o->getDistance(*allRoute[i]->getFrom()));
-        //            info += "km\n";
-        //        }
-        //    }
     }
 
     return info;
@@ -100,21 +93,3 @@ vector<Ort*> Graph::getNachbarOrte(std::queue<Route*>q, Ort* ort){
     return nachbarOrte;
 }
 
-//void Graph::removeRoute(std::queue<Route*>q,Ort* ort1,Ort* ort2){
-//    queue<Route*>temp = q;
-//    Route* r = temp.front();
-//    while(r==q.front()){
-//        if(q.front()->getFrom()==ort1 && q.front()->getTo()==ort2){
-//            q.pop();
-//            temp.pop();
-//        }
-//        else if(q.front()->getFrom()==ort2 && q.front()->getTo()==ort1){
-//            q.pop();
-//            temp.pop();
-//        }
-//        else{
-//            temp.push(q.front());
-//            q.pop();
-//        }
-//    }
-//}

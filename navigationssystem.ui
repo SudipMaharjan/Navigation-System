@@ -6,89 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>757</width>
-    <height>564</height>
+    <width>741</width>
+    <height>575</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Navigationssystem</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>220</y>
-      <width>82</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButtonOrtAnlegen">
-       <property name="text">
-        <string>Ort Anlegen</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonOrtEntfernen">
-       <property name="text">
-        <string>Ort Entfernen</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonEntfernung">
-       <property name="text">
-        <string>Entfernung</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonInformation">
-       <property name="text">
-        <string>Information</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonAlleOrte">
-       <property name="text">
-        <string>Alle Orte</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonRouting">
-       <property name="text">
-        <string>Routing</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonLaden">
-       <property name="text">
-        <string>Laden</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonExportieren">
-       <property name="text">
-        <string>Exportieren</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonImportieren">
-       <property name="text">
-        <string>Importieren</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -102,10 +27,298 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../Users/sudip/Downloads/NicePng_germany-png_8664209.png</pixmap>
+     <pixmap resource="Resources.qrc">:/images/NicePng_germany-png_8664209.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOrtAnlegen">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>70</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Ort Anlegen</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOrtEntfernen">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>130</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Ort Entfernen</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonEntfernung">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>190</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Entfernung</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonInformation">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>250</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Information</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAlleOrte">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Alle Orte</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRouting">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>490</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Routing</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonImportieren">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>430</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Importieren</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonExportieren">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>370</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Exportieren</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonLaden">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>310</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db; 
+    color: white; 
+    border-style: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+}
+
+
+QPushButton:hover {
+    background-color: #2980b9; 
+}
+
+
+QPushButton:pressed {
+    background-color: #1f618d; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Laden</string>
     </property>
    </widget>
   </widget>
@@ -114,13 +327,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>757</width>
+     <width>741</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
