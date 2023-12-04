@@ -36,11 +36,6 @@ QString Adresse::printInformation(){
 
     return att;
 }
-/**
- * @brief Adresse::binaryExport calls baseWriter with value 1 for type 'Adresse' that writes all the 'Ort' attributes to the given file, then writes
- * all the 'Adresse' specific parameters to the same file
- * @param outfile output file to write to
- */
 
 void Adresse::binaryExport(ofstream &outfile)
 {
@@ -76,3 +71,14 @@ int Adresse::getHausnummer() const {return hausnummer;}
 int Adresse::getPostleitzahl() const{return postleitzahl;}
 
 string Adresse::getStadt() const{return stadt;}
+
+QString Adresse::getTyp(){return "Adr";}
+
+QString Adresse::getParameters() const{
+    QString parameter = QString::fromStdString(strasse);
+    parameter += QString::number(hausnummer);
+    parameter += QString::number(postleitzahl);
+    parameter += QString::fromStdString(stadt);
+    return parameter;
+}
+

@@ -5,6 +5,7 @@
 
 static int nextID = 1;
 
+
 double Ort::getLongitude() const
 {
     return longitude;
@@ -24,7 +25,7 @@ string Ort::getName() const
     return name;
 }
 
-double Ort::getID() const
+int Ort::getID() const
 {
     return ID;
 }
@@ -102,3 +103,6 @@ double Ort::getDistance(Ort &ort2){
 void Ort::setDistances(Ort* ort,double dist){
     distances[ort] = dist;
 }
+
+QString Ort::getTyp(){return "ort";}
+QString Ort::getParameters() const{return "parameters";}

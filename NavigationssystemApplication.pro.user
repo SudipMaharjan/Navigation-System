@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.0, 2023-12-03T23:27:49. -->
+<!-- Written by QtCreator 9.0.0, 2023-12-04T00:27:32. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -69,11 +69,11 @@
     <value type="bool" key="AutoTest.Framework.QtTest">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
-    <value type="Qt::CheckState" key="1@C:/Sudip/NavigationssystemApplicationFinal/test.cpp:testBerlinMainz">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Sudip/NavigationssystemApplicationFinal/test.cpp:testKielMuenchen">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Sudip/NavigationssystemApplicationFinal/test.cpp:testSaarbruekenCottbus">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Sudip/NavigationssystemApplicationFinal/test.cpp:testStuttgartHamburg">Checked</value>
-    <value type="Qt::CheckState" key="1@C:/Sudip/NavigationssystemApplicationFinal/test.h:Test">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Sudip/github/Navigation-System/test.cpp:testBerlinMainz">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Sudip/github/Navigation-System/test.cpp:testKielMuenchen">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Sudip/github/Navigation-System/test.cpp:testSaarbruekenCottbus">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Sudip/github/Navigation-System/test.cpp:testStuttgartHamburg">Checked</value>
+    <value type="Qt::CheckState" key="1@C:/Sudip/github/Navigation-System/test.h:Test">Checked</value>
    </valuemap>
    <value type="int" key="AutoTest.RunAfterBuild">0</value>
    <value type="bool" key="AutoTest.UseGlobal">true</value>
@@ -242,8 +242,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Sudip/NavigationssystemApplicationFinal/NavigationssystemApplication.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Sudip/NavigationssystemApplicationFinal/NavigationssystemApplication.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">NavigationssystemApplication2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Sudip/github/Navigation-System/NavigationssystemApplication.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Sudip/github/Navigation-System/NavigationssystemApplication.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>

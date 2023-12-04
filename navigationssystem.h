@@ -43,15 +43,15 @@ public:
 
 
 private slots:
-    void on_pushButton_OrtAnlegen_clicked();
-    void on_pushButton_AlleOrte_clicked();
-    void on_pushButton_Entfernung_clicked();
-    void on_pushButton_Exportieren_clicked();
-    void on_pushButton_Importieren_clicked();
-    void on_pushButton_Information_clicked();
-    void on_pushButton_OrtEntfernen_clicked();
-    void on_pushButton_Routing_clicked();
-    void on_pushButton_Laden_clicked();
+    void OrtAnlegen();
+    void AlleOrte();
+    void Entfernung();
+    void Exportieren();
+    void Importieren();
+    void information();
+    void OrtEntfernen();
+    void Routing();
+    void Laden();
 
 private:
     Ui::Navigationssystem *ui;

@@ -21,16 +21,15 @@ Navigationssystem::Navigationssystem(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Navigationssystem)
 {
-    //auffuellen();
     ui->setupUi(this);
-    connect(ui->pushButtonAlleOrte,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_AlleOrte_clicked);
-    connect(ui->pushButtonOrtAnlegen,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_OrtAnlegen_clicked);
-    connect(ui->pushButtonOrtEntfernen,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_OrtEntfernen_clicked);
-    connect(ui->pushButtonInformation,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_Information_clicked);
-    connect(ui->pushButtonExportieren,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_Exportieren_clicked);
-    connect(ui->pushButtonImportieren,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_Importieren_clicked);
-    connect(ui->pushButtonEntfernung,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_Entfernung_clicked);
-    connect(ui->pushButtonRouting,&QPushButton::clicked,this,&Navigationssystem::on_pushButton_Routing_clicked);
+    connect(ui->pushButtonAlleOrte,&QPushButton::clicked,this,&Navigationssystem::AlleOrte);
+    connect(ui->pushButtonOrtAnlegen,&QPushButton::clicked,this,&Navigationssystem::OrtAnlegen);
+    connect(ui->pushButtonOrtEntfernen,&QPushButton::clicked,this,&Navigationssystem::OrtEntfernen);
+    connect(ui->pushButtonInformation,&QPushButton::clicked,this,&Navigationssystem::information);
+    connect(ui->pushButtonExportieren,&QPushButton::clicked,this,&Navigationssystem::Exportieren);
+    connect(ui->pushButtonImportieren,&QPushButton::clicked,this,&Navigationssystem::Importieren);
+    connect(ui->pushButtonEntfernung,&QPushButton::clicked,this,&Navigationssystem::Entfernung);
+    connect(ui->pushButtonRouting,&QPushButton::clicked,this,&Navigationssystem::Routing);
     connect(ui->pushButtonLaden,&QPushButton::clicked,this,&Navigationssystem::auffuellen);
 }
 
@@ -341,7 +340,7 @@ category stringToCategory(string& str) {
     }
 }
 
-void Navigationssystem::on_pushButton_OrtAnlegen_clicked()
+void Navigationssystem::OrtAnlegen()
 {
     QMessageBox::StandardButton reply1, reply2;
     reply1 = QMessageBox::question(nullptr, "Choose Option", "Do you want to add an address?",QMessageBox::Yes | QMessageBox::No);
@@ -360,26 +359,26 @@ void Navigationssystem::on_pushButton_OrtAnlegen_clicked()
     }
 }
 
-void Navigationssystem::on_pushButton_AlleOrte_clicked()
+void Navigationssystem::AlleOrte()
 {
     Anzeigen* liste = new Anzeigen(this->graph.getAllOrt());
     liste->show();
 }
 
-void Navigationssystem::on_pushButton_Exportieren_clicked()
+void Navigationssystem::Exportieren()
 {
     txtExport();
     QMessageBox::information(this,"Message","Data in outfile.txt exported");
 }
 
-void Navigationssystem::on_pushButton_Importieren_clicked()
+void Navigationssystem::Importieren()
 {
     txtImport();
     QMessageBox::information(this,"Message","Data from outfile.txt imported");
 }
 
 
-void Navigationssystem::on_pushButton_OrtEntfernen_clicked(){
+void Navigationssystem::OrtEntfernen(){
     QString Bname;
     for(int i{};i<dynamicButtons.size();i++){
         if(dynamicButtons[i]->isChecked()){
@@ -406,7 +405,7 @@ void Navigationssystem::on_pushButton_OrtEntfernen_clicked(){
     }
 }
 
-void Navigationssystem::on_pushButton_Entfernung_clicked(){
+void Navigationssystem::Entfernung(){
     if(getOrtfromCheckedDynamicButton().size()==2){
         int id1 = getOrtfromCheckedDynamicButton()[0]->getID();
         int id2 = getOrtfromCheckedDynamicButton()[1]->getID();
@@ -417,7 +416,7 @@ void Navigationssystem::on_pushButton_Entfernung_clicked(){
     }
 }
 
-void Navigationssystem::on_pushButton_Information_clicked()
+void Navigationssystem::information()
 {
     if(dynamicButtons.size())
         for(auto &a:dynamicButtons){
@@ -460,8 +459,6 @@ QDynamicButton* Navigationssystem::createDynamicButton(std::string name,double l
     QDynamicButton* button = new QDynamicButton(this);  // Create a dynamic button object
     button->setAutoExclusive(false);
     button->setText(QString::fromStdString(name));
-    //button->move(200,415);//stuttgart
-    //button-> move(450,172);//berlin
     button->move(x,y);
     button->show();
 
@@ -478,7 +475,6 @@ vector<Ort*> Navigationssystem::dijkstra(Ort* source, Ort* destination) {
         distances[a] = DBL_MAX;
         visited[a] = false;
         previous[a] = a;
-        //qOrt.push(a);
     }
 
     distances[source] = 0.0;
@@ -516,7 +512,7 @@ vector<Ort*> Navigationssystem::dijkstra(Ort* source, Ort* destination) {
     return path;
 }
 
-void Navigationssystem::on_pushButton_Routing_clicked()
+void Navigationssystem::Routing()
 {
     vector<Ort*>route{};
     if(getOrtfromCheckedDynamicButton().size()==2){
@@ -527,7 +523,7 @@ void Navigationssystem::on_pushButton_Routing_clicked()
 }
 
 
-void Navigationssystem::on_pushButton_Laden_clicked()
+void Navigationssystem::Laden()
 {
     auffuellen();
 }

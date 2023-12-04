@@ -25,6 +25,8 @@ public:
     category getKategorie()const;
     void binaryExport(ofstream &outfile) override;
     void txtExport(ofstream &outfile) override;
+    QString getTyp() override ;
+    QString getParameters() const override;
 };
 
 QString categoryToQString(category);

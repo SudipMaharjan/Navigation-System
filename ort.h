@@ -14,7 +14,7 @@ private:
     string name;
     const double latitude;
     const double longitude;
-    const double ID;
+    const int ID;
     bool visited = false;
     std::map<Ort*,double>distances;
 
@@ -32,11 +32,13 @@ public:
     string getName()const;
     double getLongitude() const;
     double getLatitude() const;
-    double getID() const;
+    int getID() const;
     virtual void binaryExport(ofstream &outfile);
     virtual void txtExport(ofstream &outfile);
     bool isVisited();
     void setDistances(Ort*,double);
+    virtual QString getTyp();
+    virtual QString getParameters() const;
 };
 
 #endif // ORT_H

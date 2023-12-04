@@ -75,3 +75,10 @@ QString categoryToQString(category kategorie){
     return cat;
 }
 
+QString PoI::getTyp() {return "PoI";}
+
+QString PoI::getParameters() const{
+    QString parameter = QString::fromStdString(bemerkung);
+    parameter += categoryToQString(kategorie);
+    return parameter;
+}

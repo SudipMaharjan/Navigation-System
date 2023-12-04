@@ -22,6 +22,8 @@ public:
     int getHausnummer() const;
     int getPostleitzahl() const;
     string getStadt() const;
+    QString getTyp() override;
+    QString getParameters() const override;
 };
 
 #endif // ADRESSE_H
